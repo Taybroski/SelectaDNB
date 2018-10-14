@@ -73,5 +73,9 @@
             </div>
         </div>
     </div>
+    <br>
+    <div class="tc text-center">
+        <a href="{{ route('login') }}">Already have an account? Sign in here!</a>
+    </div>
 </div>
 @endsection

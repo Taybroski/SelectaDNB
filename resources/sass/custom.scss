@@ -1,8 +1,12 @@
 // Variables
 @import 'variables';
 
-.tc { // True Center
+.tvc { // True Vertical Center
   margin-left: 50%;
+  transform: translate(-50%);
+}
+.thc { // True Horizontal Center
+  margin-top: 50%;
   transform: translate(-50%);
 }
 
