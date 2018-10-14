@@ -3,7 +3,6 @@
         <div class="row align-items-center">
             <h5 class="my-0 mr-md-auto font-weight-normal">SelectaDNB</h5>
             <nav class="my-2 my-md-0 mr-md-3">
-
             @guest
 
                 <a class="p-2 text-dark" href="{{ url('/') }}">Home</a>
