@@ -1,18 +1,36 @@
 // Variables
 @import 'variables';
 
+.container { // Meta Container
+  max-width: 1024px;
+}
+
+.wedge { // Forces page size.
+  min-height: 90vh;
+}
+
 .tc { // True Vertical Center
   margin-left: 50%;
   transform: translate(-50%);
 }
-.thc { // True Horizontal Center
-  margin-top: 50%;
-  transform: translate(-50%);
-}
 
-.container {
-  max-width: 1024px;
+// Homepage gallery
+.gal-item{
+	overflow: hidden;
+	padding: 8px;
 }
+.gal-item .box{
+	height: 100%;
+	overflow: hidden;
+}
+.box img{
+	height: 100%;
+	width: auto;
+	object-fit:cover;
+}
+//end
+
+
 
 .pricing-header {
   max-width: 700px;
@@ -22,7 +40,14 @@
   min-width: 220px;
 }
 
-.border-top { border-top: 1px solid #e5e5e5; }
-.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.border-top { 
+  border-top: 1px solid #e5e5e5; 
+}
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.border-bottom { 
+  border-bottom: 1px solid #e5e5e5; 
+}
+
+.box-shadow { 
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
+}

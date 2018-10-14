@@ -1,17 +1,32 @@
+.container {
+  max-width: 1024px;
+}
+
+.wedge {
+  min-height: 90vh;
+}
+
 .tc {
   margin-left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
 }
 
-.thc {
-  margin-top: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+.gal-item {
+  overflow: hidden;
+  padding: 8px;
 }
 
-.container {
-  max-width: 1024px;
+.gal-item .box {
+  height: 100%;
+  overflow: hidden;
+}
+
+.box img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .pricing-header {
