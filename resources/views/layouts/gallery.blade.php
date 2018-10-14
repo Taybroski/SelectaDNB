@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+    
 <div class="container">
     <header class="text-center">
         <h1>Potfolio</h1>
@@ -43,3 +47,5 @@
     </div>
     <br/>
 </div>
+
+@endsection
