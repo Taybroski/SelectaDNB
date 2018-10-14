@@ -8,6 +8,11 @@
                 <a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Blog</li></a>
                 <a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">About</li></a>
                 <a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Sale</li></a>
+                {{-- <li class="list-item">
+                    <a href="https://twitter.com/sbootstrap">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                </li> --}}
                 @guest
                     <a class="p-2 text-dark" href="{{ route('login') }}"><li class="list-item">Account</li></a>
                 @else

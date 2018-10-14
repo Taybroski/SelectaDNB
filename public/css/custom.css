@@ -12,6 +12,10 @@
           transform: translate(-50%);
 }
 
+.mw-20 {
+  max-width: 20rem;
+}
+
 .gal-item {
   overflow: hidden;
   padding: 8px;
