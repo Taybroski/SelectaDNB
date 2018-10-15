@@ -13,17 +13,32 @@
                     <i class="fab fa-twitter"></i>
                     </a>
                 </li> --}}
-                @guest
+
+
+                @if (!Auth::check())
                     <a class="p-2 text-dark" href="{{ route('login') }}"><li class="list-item">Account</li></a>
+                @endif
+                @if (Auth::check() && Auth::user()->role != 'customer')
+                    <a class="p-2 text-dark" href="{{ url('/admin') }}"><li class="list-item">Account</li></a>
+                @elseif (Auth::check() && Auth::user()->role == 'customer')
+                    <a class="p-2 text-dark" href="{{ url('/home') }}"><li class="list-item">Account</li></a>
+                @endif
+                    
+
+                {{-- @if ($usr_role != 'customer')
+                    <a class="p-2 text-dark" href="{{ url('/admin') }}"><li class="list-item">Account</li></a>
                 @else
                     <a class="p-2 text-dark" href="{{ url('/home') }}"><li class="list-item">Account</li></a>
+                @endif --}}
+
+                @if (Auth::check())
                     <a class="p-2 text-dark" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                       document.getElementById('logout-form').submit();"><li class="list-item">Logout</li></a>
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"><li class="list-item">Logout</li></a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
-                @endguest
+                @endif
             </ul>
         </nav>
     </div>
