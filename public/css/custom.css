@@ -16,6 +16,12 @@
   max-width: 20rem;
 }
 
+.img-custom {
+  width: 17rem;
+  height: 17rem;
+  border-radius: 0.250rem;
+}
+
 .gal-item {
   overflow: hidden;
   padding: 8px;

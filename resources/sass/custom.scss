@@ -1,6 +1,7 @@
 // Variables
 @import 'variables';
 
+
 .container { // Meta Container
   max-width: 1024px;
 }
@@ -15,6 +16,13 @@
 }
 .mw-20 {
   max-width: 20rem;
+}
+
+// Products
+.img-custom { // Product index
+  width: 17rem;
+  height: 17rem;
+  border-radius: 0.250rem;
 }
 
 // Homepage gallery

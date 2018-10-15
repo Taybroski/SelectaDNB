@@ -1,7 +1,7 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-1 px-md-4 mb-3 bg-white border-bottom box-shadow">
     <div class="container">
         <nav class="border-box my-md-0 p-0">
-            <ul class="row list-unstyled m-0 nav-fill">
+            <ul class="row list-unstyled m-0 nav-fill pl-5 pr-5">
                 <a class="p-2 text-dark" href="{{ url('/') }}"><li class="list-item">Home</li></a>
                 <a class="p-2 text-dark" href="{{ url('/products') }}"><li class="list-item">Shop</li></a>
                 <a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Live Stream</li></a>

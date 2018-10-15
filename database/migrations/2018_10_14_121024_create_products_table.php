@@ -17,9 +17,17 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('type');
             $table->string('title');
+            $table->string('tec_title')->nullable();
             $table->string('size');
             $table->string('colour');
-            $table->string('product_image')->nullable();
+            $table->string('supplier')->nullable();
+            $table->string('mpn')->nullable();
+            $table->string('cover_image')->nullable();
+            $table->text('description')->nullable();
+            $table->bigInteger('barcode')->nullable();
+            $table->integer('qoh')->default(0);
+            $table->float('trade')->nullable();
+            $table->float('price');
             $table->timestamps();
         });
     }
