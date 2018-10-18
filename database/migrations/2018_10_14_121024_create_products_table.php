@@ -6,17 +6,14 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProductsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('products', function (Blueprint $table) 
+        {
+            $table->increments('id')->unique();
             $table->string('type');
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->string('tec_title')->nullable();
             $table->string('size');
             $table->string('colour');
@@ -28,15 +25,11 @@ class CreateProductsTable extends Migration
             $table->integer('qoh')->default(0);
             $table->float('trade')->nullable();
             $table->float('price');
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('products');

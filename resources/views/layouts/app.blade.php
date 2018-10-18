@@ -16,14 +16,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     {{-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> --}}
 </head>
 <body>
 
-    @include('layouts.navbar')
-    <div class="container wedge">
-        @yield('content')
+    <div class="meta-wrapper">
+        @include('layouts.navbar')
+        <div class="container">
+            @yield('content')
+        </div>
+        <div class="push"></div>
     </div>
     @include('layouts.footer')
 

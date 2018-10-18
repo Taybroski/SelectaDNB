@@ -8,79 +8,72 @@ use DB;
 
 class ProductsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+        $this->middleware(['agent', 'admin'], ['except' => ['index', 'show', 'create', 'store']]);
+    }
+ 
     public function index()
     {
         $products = Product::all();
         return view('products.index', compact('products'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'type'        => 'required',
+            'tec_title'   => 'required|min:2',
+            'size'        => 'required',
+            'colour'      => 'required',
+            'cover_image' => 'image|nullable|max:1999',
+            'price'       => 'required'
+        ]);
+
+        $product = new Product;
+        $product->type        = $request->input('type');
+        $product->title       = $request->input('title');
+        $product->tec_title   = $request->input('tec_title');
+        $product->size        = $request->input('size');
+        $product->colour      = $request->input('colour');
+        $product->supplier    = $request->input('supplier');
+        $product->mpn         = $request->input('mpn');
+        $product->cover_image = $request->input('cover_image');
+        $product->description = $request->input('description');
+        $product->barcode     = $request->input('barcode');
+        $product->qoh         = $request->input('qoh');
+        $product->trade       = $request->input('trade');
+        $product->price       = $request->input('price');
+        $product->slug        = $request->input('slug');
+        $product->save();
+
+        return redirect('/admin');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $product = Product::find($id);
         return view('products.show', compact('product'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

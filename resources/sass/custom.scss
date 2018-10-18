@@ -1,10 +1,10 @@
 // Variables
 @import 'variables';
 
-h1, h2, h3, h4, h5, h6,
-p { // Reset
-  margin: 0;
-  padding: 0;
+.meta-wrapper {
+  min-height: 100vh;
+  margin: 0 auto -12rem;
+  padding-bottom: 1rem;
 }
 
 .jumbotron {
@@ -28,13 +28,13 @@ p { // Reset
 }
 
 // Products
-.img-custom { // Product index
+.img-custom { // Product Image
   width: 17rem;
   height: 17rem;
   border-radius: 0.250rem;
 }
 
-// Homepage gallery
+// Homepage Gallery
 .gal-item{
 	overflow: hidden;
 	padding: 8px;
@@ -48,8 +48,7 @@ p { // Reset
 	width: auto;
 	object-fit:cover;
 }
-//end
-
+//end Homepage Gallery
 
 
 .pricing-header {
@@ -59,6 +58,8 @@ p { // Reset
 .card-deck .card {
   min-width: 220px;
 }
+
+
 // Navbar
 nav {
   width: 100%;
@@ -72,12 +73,18 @@ nav {
 .border-bottom { 
   border-bottom: 1px solid #e5e5e5; 
 }
-// end
+// end Navbar
+
 
 // Footer
+footer,
+.push {
+  height: $footer-height;
+}
 .border-top { 
   border-top: 1px solid #e5e5e5; 
 }
+// end Footer
 
 
 .box-shadow { 
