@@ -10,6 +10,7 @@ class PagesController extends Controller
     public function __construct()
     {
         $this->middleware('auth', ['except' => 'index']);
+        $this->middleware('admin', ['except' => ['index', 'home']]);
     }
 
     public function index()
@@ -20,5 +21,9 @@ class PagesController extends Controller
     public function home()
     {
         return view('pages.home');
+    }
+
+    public function admin() {
+        return view('pages.admin');
     }
 }

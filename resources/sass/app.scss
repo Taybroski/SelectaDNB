@@ -5,6 +5,9 @@
 // Variables
 @import 'variables';
 
+// CSS Reset
+@import 'reset.scss';
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
@@ -12,3 +15,10 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.form-control {
+  height: auto;
+}
+
+// Custom style sheet
+@import 'custom.scss';

@@ -1,6 +1,15 @@
 // Variables
 @import 'variables';
 
+.meta-wrapper {
+  min-height: 100vh;
+  margin: 0 auto -12rem;
+  padding-bottom: 1rem;
+}
+
+.jumbotron {
+  margin-bottom: 0 !important;
+}
 
 .container { // Meta Container
   max-width: 1024px;
@@ -19,13 +28,13 @@
 }
 
 // Products
-.img-custom { // Product index
+.img-custom { // Product Image
   width: 17rem;
   height: 17rem;
   border-radius: 0.250rem;
 }
 
-// Homepage gallery
+// Homepage Gallery
 .gal-item{
 	overflow: hidden;
 	padding: 8px;
@@ -39,8 +48,7 @@
 	width: auto;
 	object-fit:cover;
 }
-//end
-
+//end Homepage Gallery
 
 
 .pricing-header {
@@ -50,6 +58,8 @@
 .card-deck .card {
   min-width: 220px;
 }
+
+
 // Navbar
 nav {
   width: 100%;
@@ -63,12 +73,18 @@ nav {
 .border-bottom { 
   border-bottom: 1px solid #e5e5e5; 
 }
-// end
+// end Navbar
+
 
 // Footer
+footer,
+.push {
+  height: $footer-height;
+}
 .border-top { 
   border-top: 1px solid #e5e5e5; 
 }
+// end Footer
 
 
 .box-shadow { 
