@@ -23,6 +23,7 @@
     <div class="meta-wrapper">
         @include('layouts.navbar')
         <div class="container">
+            @include('includes.messages')
             @yield('content')
         </div>
         <div class="push"></div>

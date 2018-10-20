@@ -9,7 +9,7 @@
         </div>
 
         <div class="panel-body">
-            <form method="POST" action="/products" class="form-control form-horizontal" role="form">
+            <form method="POST" action="/products" enctype="multipart/form-data" class="form-control form-horizontal" role="form">
             
                 {{ csrf_field() }}
 
@@ -156,7 +156,8 @@
                     </div>
                 </div> <!-- form-group // -->
 
-
+                @include('includes.messages')
+                
             </form> <!-- Form Close -->
         </div><!-- panel-body // -->
     </section><!-- panel// -->

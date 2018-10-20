@@ -39,12 +39,13 @@ class ProductsController extends Controller
 
         // Handle image upload
         if ($request->hasFile('cover_image')) {
-            $image = $request->file('cover_image');
-            $name  = $time().'.'.$image->getClientOriginalExtension();
-            $location = public_path('images');
-            $this->save();
+            $raw_image = $request->file('cover_image')->getClientOriginalName();
+            $name      = pathinfo($raw_image, PATHINFO_FILENAME);
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            $image     = $name.'.'.time().'.'.$extension;
+            $path      = $request->file('cover_image')->storeAs('public/images', $image);
         } else {
-            $name = 'no_image.jpg';
+            $image = 'no_image.jpg';
         }
 
         $product = new Product;
@@ -55,7 +56,7 @@ class ProductsController extends Controller
         $product->colour      = $request->input('colour');
         $product->supplier    = $request->input('supplier');
         $product->mpn         = $request->input('mpn');
-        $product->cover_image = $request->input('cover_image');
+        $product->cover_image = $image;
         $product->description = $request->input('description');
         $product->barcode     = $request->input('barcode');
         $product->qoh         = $request->input('qoh');
@@ -64,13 +65,13 @@ class ProductsController extends Controller
         $product->slug        = $request->input('slug');
         $product->save();
 
-        return redirect('/admin');
+        return redirect('/admin')->with('success', 'Product added to database!');
 
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $product = Product::find($id);
+        $product = Product::find($slug);
         return view('products.show', compact('product'));
     }
 
