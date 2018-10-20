@@ -143,7 +143,7 @@
 
                 {{-- IMAGE UPLOAD --}}
                 <div class="col-sm-3">
-                    <label for="cover_image" class="control-label small" for="file_img">Cover Image</label>
+                    <label for="cover_image" class="control-label small">Cover Image</label>
                     <input type="file" name="cover_image">
                 </div>
 

@@ -33,9 +33,19 @@ class ProductsController extends Controller
             'tec_title'   => 'required|min:2',
             'size'        => 'required',
             'colour'      => 'required',
-            'cover_image' => 'image|nullable|max:1999',
+            'cover_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:1999',
             'price'       => 'required'
         ]);
+
+        // Handle image upload
+        if ($request->hasFile('cover_image')) {
+            $image = $request->file('cover_image');
+            $name  = $time().'.'.$image->getClientOriginalExtension();
+            $location = public_path('images');
+            $this->save();
+        } else {
+            $name = 'no_image.jpg';
+        }
 
         $product = new Product;
         $product->type        = $request->input('type');
