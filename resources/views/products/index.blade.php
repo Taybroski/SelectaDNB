@@ -16,7 +16,7 @@
                             <li>Size: {{ $product->size }}</li>
                             <li>&pound; {{ $product->price }}</li>
                         </ul>
-                        <a href="/products/{{ $product->slug }}" class="btn btn-lg btn-block btn-outline-primary">View</a>
+                        <a href="/products/{{ $product->id }}" class="btn btn-lg btn-block btn-outline-primary">View</a>
                         <button type="button" class="btn btn-lg btn-block btn-primary">Add To Basket</button>
                     </div>
                 </div>

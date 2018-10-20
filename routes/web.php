@@ -14,7 +14,7 @@ Route::get('/home', 'PagesController@home');
 Route::get('/admin', 'PagesController@admin');
 
 // Route::get('/products', 'ProductsController@index');
-// Route::get('/products/show', 'ProductsController@show');
+// Route::get('/products/{{ $slug }}', 'ProductsController@show');
 // Route::get('/products/create', 'ProductsController@create');
 
 Route::resource('/products', 'ProductsController');
