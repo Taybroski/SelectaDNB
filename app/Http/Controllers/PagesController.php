@@ -9,8 +9,8 @@ class PagesController extends Controller
   
     public function __construct()
     {
-        $this->middleware('auth', ['except' => 'index']);
-        $this->middleware('admin', ['except' => ['index', 'home']]);
+        // $this->middleware('auth', ['except' => 'index']);
+        // $this->middleware('admin', ['except' => ['index', 'home']]);
     }
 
     public function index()

@@ -10,14 +10,13 @@ class Admin
     // Admin access control authentication
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->role == 'admin') {
+        $roles = array('agent', 'admin');
+        
+        if (Auth::check() &&  in_array(Auth::user()->role, $roles)) {
             return $next($request);
         }
-        elseif (Auth::check() && Auth::user()->role == 'agent') {
-            return redirect('/admin');
-        }
         else {
-            return redirect('/home');
+            return redirect('/');
         }
     }
 }

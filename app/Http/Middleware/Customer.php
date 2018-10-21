@@ -9,14 +9,14 @@ class Customer
 {
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->role == 'customer') {
+
+        $roles = array('customer', 'agent', 'admin');
+        
+        if (Auth::check() &&  in_array(Auth::user()->role, $roles)) {
             return $next($request);
         }
-        elseif (Auth::check() && Auth::user()->role == 'agent') {
-            return redirect('/homer');
-        }
         else {
-            return redirect('/admin');
+            return redirect('/');
         }
     }
 }

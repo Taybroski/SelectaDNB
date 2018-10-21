@@ -10971,8 +10971,8 @@ nav ul {
 
 .img-thumb {
   display: inline-block;
-  max-width: 150px !important;
-  height: 150px;
+  max-width: 10rem !important;
+  height: 10rem;
   background-attachment: fixed;
   background-repeat: no-repeat;
   border: 1.2px solid rgba(0, 0, 0, 0.1);

@@ -11,8 +11,8 @@ class ProductsController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['index', 'show']]);
-        $this->middleware(['agent', 'admin'], ['except' => ['index', 'show', 'create', 'store']]);
+        // $this->middleware('auth', ['except' => ['index', 'show']]);
+        // $this->middleware(['agent', 'admin'], ['except' => ['index', 'show', 'create', 'store', 'list']]);
     }
  
     public function index()
@@ -72,7 +72,7 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        return view('products.show')->with('product', $product);
+        return view('products.show', compact('product'));
     }
 
     public function edit($id)
@@ -88,5 +88,11 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function list()
+    {
+        $products = Product::all();
+        return view('products.list', compact('products'));
     }
 }

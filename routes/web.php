@@ -3,18 +3,12 @@
 
 Auth::routes();
 
-// Admin / Agent route access
-// Route::middleware(['admin', 'agent'])->group(function() {
-//     Route::get('/products/create', 'ProductsController@create');
-    
-// });
-
 Route::get('/', 'PagesController@index');
-Route::get('/home', 'PagesController@home');
-Route::get('/admin', 'PagesController@admin');
+Route::get('/home', 'PagesController@home')->middleware('customer');
+Route::get('/admin', 'PagesController@admin')->middleware('agent');
 
-// Route::get('/products', 'ProductsController@index');
-// Route::get('/products/{{ $slug }}', 'ProductsController@show');
-// Route::get('/products/create', 'ProductsController@create');
+Route::get('/products', 'ProductsController@index');
+Route::get('/products/list', 'ProductsController@list')->middleware('agent');
+Route::get('/products/create', 'ProductsController@create')->middleware('agent');
+Route::get('/products/{id}', 'ProductsController@show');
 
-Route::resource('/products', 'ProductsController');

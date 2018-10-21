@@ -9,14 +9,13 @@ class Agent
 {
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->role == 'agent') {
+        $roles = array('agent', 'admin');
+        
+        if (Auth::check() &&  in_array(Auth::user()->role, $roles)) {
             return $next($request);
         }
-        elseif (Auth::check() && Auth::user()->role == 'customer') {
-            return redirect('/home');
-        }
         else {
-            return redirect('/admin');
+            return redirect('/');
         }
     }
 }

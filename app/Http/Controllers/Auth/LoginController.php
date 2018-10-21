@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -23,7 +24,16 @@ class LoginController extends Controller
     /**
      * Where to redirect users after login.
      */
-    protected $redirectTo = '/home';
+    
+    // protected $redirectTo = '/home';
+
+    public function redirectTo() {
+        if (Auth::check() && Auth::user()->role != 'customer') {
+            return '/admin';
+        } else {
+            return '/home';
+        }
+    }
 
     public function __construct()
     {
