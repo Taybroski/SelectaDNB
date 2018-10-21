@@ -22,8 +22,4 @@ class PagesController extends Controller
     {
         return view('pages.home');
     }
-
-    public function admin() {
-        return view('pages.admin');
-    }
 }
