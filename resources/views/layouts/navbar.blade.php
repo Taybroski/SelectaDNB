@@ -19,14 +19,15 @@
                     <a class="p-2 text-dark" href="{{ route('login') }}"><li class="list-item">Account</li></a>
                 @endif
                 @if (Auth::check() && Auth::user()->role != 'customer')
-                    <div class="dropdown">
-                        <div class="row">
-                            <a class="dropdown-toggle p-2 text-dark" data-toggle="dropdown" href="#"><li class="list-item">Account <b class="caret"></b></li></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="{{ url('/admin') }}">Admin</a></li>
-                                <li><a href="{{ url('/home') }}">Home</a></li>
-                            </ul>
-                        </div>
+                    <div class="dropdown p-2">
+                        <a class="text-dark" data-toggle="dropdown" href="#">
+                            <li class="list-item">Account <i class="fas fa-caret-down pl-1 p-0"></i></li>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="{{ url('/admin') }}">Admin</a></li>
+                            <li class="dropdown-item"><a href="{{ url('/home') }}">Home</a></li>
+                            <li class="dropdown-item"><a href="{{ url('/products/create') }}">Upload</a></li>
+                        </ul>
                     </div>
                 @elseif (Auth::check() && Auth::user()->role == 'customer')
                     <a class="p-2 text-dark" href="{{ url('/home') }}"><li class="list-item">Account</li></a>
