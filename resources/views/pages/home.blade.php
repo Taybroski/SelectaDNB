@@ -1,25 +1,35 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    @if ($role == 'customer')
-                        <i class="fas fa-user pr-2"></i>Welcome {{ $name }} <small>({{ $role }})</small>
-                    @elseif ($role == 'agent')
-                         <i class="fas fa-user-tie pr-2"></i>Welcome {{ $name }} <small>({{ $role }})</small>
-                    @elseif ($role == 'admin')
-                        <i class="fas fa-user-secret pr-2"></i>Welcome {{ $name }} <small>({{ $role }})
-                    @endif
-                </div>
 
-                <div class="card-body">
-                    You are logged in!
-                </div> 
+    <div class="container">
+        <div class="col-md-12 mb-3">
+            <div class="card">
+                <h1 class="text-muted text-center">
+                    @if ($role == 'customer')
+                        <i class="fas fa-user pr-4"></i>Welcome {{ $name }} <small>({{ $role }})</small>
+                    @elseif ($role == 'agent')
+                            <i class="fas fa-user-tie pr-4"></i>Welcome {{ $name }} <small>({{ $role }})</small>
+                    @elseif ($role == 'admin')
+                        <i class="fas fa-user-secret pr-4"></i>Welcome {{ $name }} <small>({{ $role }})</small>
+                    @endif
+                </h1>
             </div>
         </div>
-    </div>
-</div>
+      
+      <div class="f-row justify-content-center">
+
+          {{-- Left sidebar --}}
+          <div class="sidebar col-md-4" role="navigation">
+              @include('includes.sidebar')
+          </div>
+
+          {{-- Right card main --}}
+          <div class="col-md-8">
+              @include('includes.profile')
+          </div>
+
+      </div>
+  </div> 
+
 @endsection

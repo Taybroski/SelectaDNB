@@ -2,21 +2,34 @@
 
 @section('content')
 
-  <div class="container">
-      <h1 class="text-muted text-center">HELLO ADMIN!</h1>
-      <div class="f-row justify-content-center">
+<div class="container">
+	<div class="col-md-12 mb-3">
+		<div class="card">
+			<h1 class="text-muted text-center">
+				@if ($role == 'customer')
+					<i class="fas fa-user pr-4"></i>Welcome {{ $name }} <small>({{ $role }})</small>
+				@elseif ($role == 'agent')
+						<i class="fas fa-user-tie pr-4"></i>Welcome {{ $name }} <small>({{ $role }})</small>
+				@elseif ($role == 'admin')
+					<i class="fas fa-user-secret pr-4"></i>Welcome {{ $name }} <small>({{ $role }})</small>
+				@endif
+			</h1>
+		</div>
+	</div>
 
-          {{-- Left sidebar --}}
-          <div class="sidebar col-md-4" role="navigation">
-              @include('admin.includes.sidebar')
-          </div>
+	<div class="f-row justify-content-center">
 
-          {{-- Right card main --}}
-          <div class="col-md-8">
-              @include('admin.includes.profile')
-          </div>
+		{{-- Left sidebar --}}
+		<div class="sidebar col-md-4" role="navigation">
+			@include('admin.includes.sidebar')
+		</div>
 
-      </div>
-  </div> 
-    
+		{{-- Right card main --}}
+		<div class="col-md-8">
+			@include('admin.includes.profile')
+		</div>
+
+	</div>
+</div> 
+	
 @endsection

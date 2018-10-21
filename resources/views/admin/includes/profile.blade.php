@@ -1,10 +1,6 @@
 <div class="card">
     <div class="card-header">
-      @if ($role == 'agent')
-            <i class="fas fa-user-tie pr-2"></i>Welcome {{ $name }} <small>({{ $role }})</small>
-      @elseif ($role == 'admin')
-          <i class="fas fa-user-secret pr-2"></i>Welcome {{ $name }} <small>({{ $role }})</small>
-      @endif
+      <p class="text-center">Dashboard</p>
     </div>
 
     <div class="card-body minh-40">

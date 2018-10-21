@@ -1,5 +1,5 @@
 <div class="card">
-	<div class="card-header text-center">Selecta DNB</div>
+	<div class="card-header text-center">Navigation</div>
 	<div class="card-body minh-40">
 		<ul class="list-group list-unstyled text-dark">
 			<a href="{{ url('/admin/products') }}"><li class="sidebar-item mt-0"><i class="fas fa-table pr-2"></i>All Products</li></a>
