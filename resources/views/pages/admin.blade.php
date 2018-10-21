@@ -4,7 +4,7 @@
 <div class="container">
     <h1 class="text-muted">HELLO ADMIN!</h1>
     <div class="row justify-content-center">
-        <div class="sidebar col-md-3" role="navigation">
+        <div class="sidebar col-md-4" role="navigation">
             <div class="card">
                 <div class="card-header text-center">Selecta DNB</div>
                 <div class="card-body">
@@ -18,13 +18,26 @@
                 </div>
             </div>
         </div>
-            <div class="col-md-8">
+            <div class="col-md-7">
             <div class="card">
                 <div class="card-header"><i class="fas fa-user-secret pr-2"></i> Welcome {{ Auth::user()->name }} <small>({{ Auth::user()->role }})</small></div>
 
                 <div class="card-body">
-                    You are logged in!
-                </div> 
+                    <div class="f-row minw-100">
+                        <div class="col-md-8">
+                            <p class="text-muted">Products Added: 9</p>
+                            <p class="text-muted">Tickets Answered: 27</p>
+                            <p class="text-muted">Blog posts: 2</p>
+                            <p class="text-muted">Comments: 7</p>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <img src="http://placekitten.com/200/300" alt="" class="img-thumbnail img-thumb">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <a href="{{ url('/home') }}">Visit Profile <i class="fas fa-arrow-alt-circle-right pl-2"></i></a>
+                </div>
             </div>
         </div>
     </div>

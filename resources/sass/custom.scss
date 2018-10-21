@@ -1,6 +1,9 @@
 // Variables
 @import "variables";
 
+p {
+    margin: 0;
+}
 .meta-wrapper {
     min-height: 100vh;
     margin: 0 auto -12rem; // Height of footer
@@ -23,6 +26,13 @@
 }
 .mt-0 {
     margin-top: 0 !important;
+}
+.minw-100 {
+    min-width: 100%;
+}
+.f-row {
+    display: flex;
+    flex-direction: row !important;
 }
 .form-control {
     height: auto;
@@ -83,11 +93,23 @@ nav {
 
 // Admin Nav sidebar
 .sidebar-item {
-    padding: 0 0 0.5rem 0.5rem;
+    padding: 0 0 0.5rem 1rem;
     margin-top: 0.6rem;
     border-bottom: 1.2px solid rgba(0, 0, 0, 0.1);
 }
 // end Admin Nav sidebar
+
+// Admin Main
+.img-thumb {
+    display: inline-block;
+    max-width: 150px !important;
+    height: 150px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border: 1.2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.2rem;
+}
+// end Admin Main
 
 // Footer
 footer,
