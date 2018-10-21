@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-      <p class="text-center">Dashboard</p>
+      <p class="text-center">Admin Panel</p>
     </div>
 
     <div class="card-body minh-40">

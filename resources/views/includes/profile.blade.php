@@ -18,6 +18,10 @@
         </div>
       </div>
     <div class="card-footer text-right">
-        <a href="{{ url('/') }}">Home <i class="fas fa-arrow-alt-circle-right pl-2"></i></a>
+        @if ($role != 'customer')
+            <a href="{{ url('/admin') }}">Admin Panel <i class="fas fa-arrow-alt-circle-right pl-2"></i></a>
+        @else
+            <a href="{{ url('/') }}">Home <i class="fas fa-arrow-alt-circle-right pl-2"></i></a>
+        @endif
     </div>
 </div>
