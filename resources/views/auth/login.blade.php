@@ -69,7 +69,7 @@
     </div>
     <br>
     <div class="tc text-center">
-        <a href="{{ route('register') }}">Don't have an account? Sign up here!</a>
+        <a href="{{ route('register') }}" class="btn btn-link">Don't have an account? Sign up here!</a>
     </div>
 </div>
 @endsection

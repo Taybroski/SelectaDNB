@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Product;
+use Auth;
 
 class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.index');
+        $name = Auth::user()->name;
+        $role = Auth::user()->role;
+        return view('admin.index', compact('name', 'role'));
     }
 
     public function products()

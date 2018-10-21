@@ -10883,6 +10883,10 @@ p {
   min-width: 100%;
 }
 
+.minh-40 {
+  min-height: 20rem;
+}
+
 .f-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10931,9 +10935,10 @@ table > thead {
 }
 
 .img-custom {
-  width: 17rem;
-  height: 17rem;
-  border-radius: 0.25rem;
+  width: 18rem;
+  max-width: 100%;
+  height: 18rem;
+  border-radius: 0.2rem;
 }
 
 .gal-item {

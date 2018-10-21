@@ -5,12 +5,12 @@ p {
     margin: 0;
 }
 .meta-wrapper {
+    // Main config wrapper
     min-height: 100vh;
     margin: 0 auto -12rem; // Height of footer
     padding-bottom: 1rem;
 }
 .container {
-    // Meta Container
     max-width: 1024px;
 }
 .jumbotron {
@@ -29,6 +29,9 @@ p {
 }
 .minw-100 {
     min-width: 100%;
+}
+.minh-40 {
+    min-height: 20rem;
 }
 .f-row {
     display: flex;
@@ -57,13 +60,15 @@ table > thead {
     border-radius: 0.5rem;
     background-color: rgba(0, 0, 0, 0.075);
 }
+// end Tables
 
 // Products
 .img-custom {
     // Product Image
-    width: 17rem;
-    height: 17rem;
-    border-radius: 0.25rem;
+    width: 18rem;
+    max-width: 100%;
+    height: 18rem;
+    border-radius: 0.2rem;
 }
 // end Products
 

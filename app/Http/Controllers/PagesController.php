@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class PagesController extends Controller
 {
@@ -20,6 +21,8 @@ class PagesController extends Controller
 
     public function home()
     {
-        return view('pages.home');
+        $name = Auth::user()->name;
+        $role = Auth::user()->role;
+        return view('pages.home', compact('name', 'role'));
     }
 }

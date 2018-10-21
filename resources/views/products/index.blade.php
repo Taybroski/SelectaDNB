@@ -7,7 +7,7 @@
             @foreach ($products as $product)
                 <div class="card mb-4 box-shadow mw-20">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">{{ $product->type }}</h4>
+                        <h4 class="my-0 font-weight-normal">{{ ucfirst(trans($product->type)) }}</h4>
                     </div>
                     <div class="card-body">
                         <img src="/storage/images/{{ $product->cover_image }}" alt="{{ $product->title }}" class="img-custom">
