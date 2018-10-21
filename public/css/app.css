@@ -10925,6 +10925,11 @@ p {
   min-width: 220px;
 }
 
+table > thead {
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
 .img-custom {
   width: 17rem;
   height: 17rem;

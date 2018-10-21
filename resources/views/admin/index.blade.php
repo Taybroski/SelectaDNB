@@ -12,7 +12,7 @@
                   <div class="card-header text-center">Selecta DNB</div>
                   <div class="card-body">
                       <ul class="list-group list-unstyled text-dark">
-                          <a href="{{ url('/products/list') }}"><li class="sidebar-item mt-0"><i class="fas fa-table pr-2"></i>All Products</li></a>
+                          <a href="{{ url('/admin/products') }}"><li class="sidebar-item mt-0"><i class="fas fa-table pr-2"></i>All Products</li></a>
                           <a href="{{ url('/products/create') }}"><li class="sidebar-item"><i class="fas fa-plus-square pr-2"></i>New Product</li></a>
                           <a href="#"><li class="sidebar-item"><i class="fas fa-database pr-2"></i>Orders</li></a>
                           <a href="#"><li class="sidebar-item"><i class="fas fa-users pr-2"></i>Users</li></a>

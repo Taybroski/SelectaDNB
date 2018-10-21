@@ -52,6 +52,12 @@ p {
     min-width: 220px;
 }
 
+// Tables
+table > thead {
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
 // Products
 .img-custom {
     // Product Image
