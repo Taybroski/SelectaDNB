@@ -25,4 +25,24 @@ class PagesController extends Controller
         $role = Auth::user()->role;
         return view('pages.home', compact('name', 'role'));
     }
+
+    public function about()
+    {
+        return view('pages.about');
+    }
+
+    public function privacy()
+    {
+        return view('pages.privacy');
+    }
+
+    public function returns()
+    {
+        return view('pages.returns');
+    }
+
+    public function terms()
+    {
+        return view('pages.terms');
+    }
 }

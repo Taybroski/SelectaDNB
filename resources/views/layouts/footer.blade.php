@@ -20,10 +20,10 @@
           <div class="col-6 col-md">
             <h5>About Us</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">The Team</a></li>
+              <li><a class="text-muted" href="{{ url('/about') }}">The Team</a></li>
               <li><a class="text-muted" href="#">Reviews</a></li>
-              <li><a class="text-muted" href="#">Security &amp; Privacy</a></li>
-              <li><a class="text-muted" href="#">Returns Policy</a></li>
+              <li><a class="text-muted" href="{{ url('/privacy') }}">Security &amp; Privacy</a></li>
+              <li><a class="text-muted" href="{{ url('/returns') }}">Returns Policy</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
@@ -31,7 +31,7 @@
             <ul class="list-unstyled text-small">
               <li><a class="text-muted" href="#">My Account</a></li>
               <li><a class="text-muted" href="#">Customer Service</a></li>
-              <li><a class="text-muted" href="#">Terms</a></li>
+              <li><a class="text-muted" href="{{ url('/terms') }}">Terms</a></li>
               <li><a class="text-muted" href="#">Legal</a></li>
             </ul>
           </div>

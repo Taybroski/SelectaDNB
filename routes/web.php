@@ -6,6 +6,10 @@ Auth::routes();
 // Pages routes
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'PagesController@home')->middleware('customer');
+Route::get('/about', 'PagesController@about');
+Route::get('/privacy', 'PagesController@privacy');
+Route::get('/returns', 'PagesController@returns');
+Route::get('/terms', 'PagesController@terms');
 
 // Products routes
 Route::get('/products', 'ProductsController@index');
