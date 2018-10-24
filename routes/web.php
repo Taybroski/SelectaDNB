@@ -14,6 +14,7 @@ Route::get('/terms', 'PagesController@terms');
 // Products routes
 Route::get('/products', 'ProductsController@index');
 Route::get('/products/create', 'ProductsController@create')->middleware('agent');
+Route::post('/products/{id}', 'ProductsController@store')->middleware('agent');
 Route::get('/products/{id}', 'ProductsController@show');
 
 // Admin routes

@@ -10,7 +10,7 @@ class Product extends Model
 {
     use HasSlug;
     
-    /**
+    /** 
      * Get the options for generating the slug.
      */
     public function getSlugOptions() : SlugOptions
@@ -25,4 +25,9 @@ class Product extends Model
     public $primaryKey = 'id';
 
     public $timestamps = true;
+
+    public function getSizeAttribute($value)
+    {
+        return ucfirst($value);
+    }
 }
