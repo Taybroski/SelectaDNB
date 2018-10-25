@@ -7,17 +7,18 @@
 			<a href="#"><li class="sidebar-item text-muted"><i class="fas fa-question-circle pr-2"></i>Wheres My Stuff?</li></a>
 			<a href="#"><li class="sidebar-item text-muted"><i class="fas fa-envelope pr-2"></i>Contact Us</li></a>
 			<a href="#"><li class="sidebar-item text-muted"><i class="fab fa-blogger-b pr-2"></i>Blog</li></a>
+			@if (Auth::check())
+				<a href="{{ route('logout') }}" 
+					onclick="event.preventDefault();
+					document.getElementById('logout-form').submit();">
+					<li class="sidebar-item font-weight-bold"><i class="fas fa-arrow-alt-circle-left pr-2"></i>Logout</li></a>
+				<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+					@csrf
+				</form>
+			@endif
 		</ul>
 	</div>
 	<div class="card-footer text-left">
-		@if (Auth::check())
-			<a href="{{ route('logout') }}" 
-				onclick="event.preventDefault();
-				document.getElementById('logout-form').submit();">
-				<i class="fas fa-arrow-alt-circle-left pr-2"></i> Logout</a>
-			<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-				@csrf
-			</form>
-		@endif
+		<a href="{{ URL::previous() }}"><i class="fas fa-arrow-alt-circle-left pr-2"></i> Back</a>
 	</div>
 </div>

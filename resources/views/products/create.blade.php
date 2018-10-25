@@ -9,7 +9,7 @@
         </div>
 
         <div class="panel-body">
-            <form method="POST" action="/products" enctype="multipart/form-data" class="form-control form-horizontal" role="form">
+            <form method="POST" action="ProductController@store" enctype="multipart/form-data" class="form-control form-horizontal" role="form">
             
                 {{ csrf_field() }}
 
@@ -29,7 +29,7 @@
                 <div class="form-group">
                     <label for="title" class="col-sm-3 control-label">Title</label>
                     <div class="col-sm-9">
-                    <input type="text" class="form-control" name="title" placeholder="Front end title...">
+                        <input type="text" class="form-control" name="title" placeholder="Front end title...">
                     </div>
                 </div> <!-- form-group // -->
 
@@ -38,7 +38,7 @@
                 <div class="form-group">
                     <label for="tec_title" class="col-sm-3 control-label">Technical Title</label>
                     <div class="col-sm-9">
-                    <input type="text" name="tec_title" class="form-control" placeholder="Long title" required>
+                        <input type="text" name="tec_title" class="form-control" placeholder="Long title" required>
                     </div>
                 </div> <!-- form-group // -->
                 
@@ -47,7 +47,7 @@
                 <div class="form-group">
                     <label for="description" class="col-sm-3 control-label">Description</label>
                     <div class="col-sm-9">
-                    <textarea name="description" class="form-control" placeholder="Type here"></textarea>
+                        <textarea name="description" class="form-control" placeholder="Type here"></textarea>
                     </div>
                 </div> <!-- form-group // -->
 

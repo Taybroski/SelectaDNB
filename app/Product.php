@@ -26,7 +26,16 @@ class Product extends Model
 
     public $timestamps = true;
 
+    // First letter uppercase Accessors
     public function getSizeAttribute($value)
+    {
+        return ucfirst($value);
+    }
+    public function getColourAttribute($value)
+    {
+        return ucfirst($value);
+    }
+    public function getTypeAttribute($value)
     {
         return ucfirst($value);
     }

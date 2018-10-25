@@ -5,11 +5,10 @@
 				
 				<a class="p-2 text-dark" href="{{ url('/') }}"><li class="list-item">Home</li></a>
 				<a class="p-2 text-dark" href="{{ url('/products') }}"><li class="list-item">Shop</li></a>
-				<a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Live Stream</li></a>
+				<a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Live</li></a>
 				<a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Blog</li></a>
-				<a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">About</li></a>
+				<a class="p-2 text-dark" href="{{ url('/about') }}"><li class="list-item">About</li></a>
 				<a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Sale</li></a>
-				<a class="p-2 text-dark" href="{{ url('/products/create') }}"><li class="list-item">Upload</li></a>
 				{{-- <li class="list-item">
 					<a href="https://twitter.com/sbootstrap">
 					<i class="fab fa-twitter"></i>
@@ -30,11 +29,11 @@
 							<li class="dropdown-item"><a href="{{ url('/admin') }}">Admin</a></li>
 							<li class="dropdown-item"><a href="{{ url('/home') }}">Home</a></li>
 							<li class="dropdown-item"><a href="{{ url('/products/create') }}">Upload</a></li>
-							<a class="p-2 text-dark" href="{{ route('logout') }}"
-								onclick="event.preventDefault();
-								document.getElementById('logout-form').submit();">
-								<li class="list-item">Logout</li>
-							</a>
+							<li class="dropdown-item font-weight-bold"><a href="{{ route('logout') }}"
+									onclick="event.preventDefault();
+									document.getElementById('logout-form').submit();">Logout
+									<i class="fas fa-sign-out-alt pl-2"></i></a>
+							</li>
 							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 								@csrf
 							</form>
@@ -49,11 +48,11 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li class="dropdown-item"><a href="{{ url('/home') }}">Home</a></li>
-							<a class="p-2 text-dark" href="{{ route('logout') }}"
-								onclick="event.preventDefault();
-								document.getElementById('logout-form').submit();">
-								<li class="list-item">Logout</li>
-							</a>
+							<li class="dropdown-item font-weight-bold"><a href="{{ route('logout') }}"
+									onclick="event.preventDefault();
+									document.getElementById('logout-form').submit();">Logout
+									<i class="fas fa-sign-out-alt pl-2"></i></a>
+							</li>
 							<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 								@csrf
 							</form>
