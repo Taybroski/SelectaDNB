@@ -16,9 +16,9 @@ Route::get('/contents', 'ContentsController@index');
 Route::get('/contents/edit', 'ContentsController@edit');
 
 // Products routes
+Route::get('/products/create', 'ProductsController@create')->middleware('agent');
 Route::post('/products/{id}', 'ProductsController@store')->middleware('agent');
 Route::get('/products/{id}', 'ProductsController@show');
-Route::get('/products/create', 'ProductsController@create')->middleware('agent');
 Route::get('/products', 'ProductsController@index');
 // Route::resource('/products', 'ProductsController');
 
