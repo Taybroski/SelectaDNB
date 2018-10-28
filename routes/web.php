@@ -3,6 +3,12 @@
 
 Auth::routes();
 
+// Contents routes
+Route::post('/contents/{content}', 'ContentsController@update');
+Route::get('/contents', 'ContentsController@index');
+Route::get('/contents/edit', 'ContentsController@edit');
+Route::resource('/contents', 'ContentsController');
+
 // Pages routes
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'PagesController@home')->middleware('customer');
@@ -10,10 +16,6 @@ Route::get('/about', 'PagesController@about');
 Route::get('/privacy', 'PagesController@privacy');
 Route::get('/returns', 'PagesController@returns');
 Route::get('/terms', 'PagesController@terms');
-
-// Contents routes
-Route::get('/contents', 'ContentsController@index');
-Route::get('/contents/edit', 'ContentsController@edit');
 
 // Products routes
 Route::get('/products/create', 'ProductsController@create')->middleware('agent');

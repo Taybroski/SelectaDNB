@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Content;
+use DB;
 
 class ContentsController extends Controller
 {
@@ -22,17 +24,11 @@ class ContentsController extends Controller
         //
     }
 
-    public function show($id)
-    {
-        //
-    }
-
     public function edit()
     {
-        // $contents = Content::find($id);
-        return view('contents.edit');
+        $about = Content::where('name', '=', 'about')->get();
+        return view('contents.edit', compact('about'));
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -43,6 +39,11 @@ class ContentsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'about_title' => 'nullable',
+            'about_body'  => 'nullable'
+        ]);
+
         $content = Content::find($id);
         $content->about_title = $request->input('about_title');
         $content->about_body = $request->input('about_body');

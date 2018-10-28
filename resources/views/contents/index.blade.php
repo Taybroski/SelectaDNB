@@ -4,12 +4,14 @@
 
 <div class="container">
 	
+	<h1 class="text-muted text-center">Content Manager</h1>
+
 	<div class="justify-content-center">
 		<div class="f-row">
 			{{-- Left sidebar --}}
 			<div class="sidebar col-md-4" role="navigation">
 				@include('contents.includes.sidebar')
-			</div>
+			</div>	
 	
 			{{-- Right card main --}}
 			<div class="col-md-8">

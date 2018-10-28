@@ -22,24 +22,28 @@
 							<p class="text-center">About</p>
 					</div>
 
-					<form action="ContentsController@update" method="post">
-						<div class="card-body minh-40">
-							{{ method_field('PUT') }}
-							{{ csrf_field() }}
+					<form action="/contents/update" method="post" role="form">
+						@foreach ($about as $about)
+								
+							<div class="card-body minh-40">
+								{{ method_field('PUT') }}
+								{{ csrf_field() }}
 
-							{{-- About --}}
-							<div class="form-group">
-								<label for="about_title">Title</label>
-								<input type="text" class="form-control" name="about_title">
-								<br>
-								<label for="about_body">Body</label>
-								<textarea name="about_body" class="form-control" cols="30" rows="6"></textarea>
+								{{-- About --}}
+								<div class="form-group">
+									<label for="about_title">Title</label>
+									<input name="about_title" type="text" class="form-control" value="{{ $about->about_title }}">
+									<br>
+									<label for="about_body">Body</label>
+									<textarea name="about_body" class="form-control" cols="30" rows="6" value="{{ $about->about_body }}"></textarea>
+								</div>
+
+							</div>
+							<div class="card-footer text-right">
+									<button type="submit">Save Changes<i class="fas fa-arrow-alt-circle-right pl-2"></i></button>
 							</div>
 
-						</div>
-						<div class="card-footer text-right">
-								<a href="{{ url('#') }}">Save Changes<i class="fas fa-arrow-alt-circle-right pl-2"></i></a>
-						</div>
+						@endforeach
 					</form>
 				</div>
 

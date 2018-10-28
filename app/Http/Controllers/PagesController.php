@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Content;
 use Auth;
 
 class PagesController extends Controller
@@ -28,7 +29,8 @@ class PagesController extends Controller
 
     public function about()
     {
-        return view('pages.about');
+        $about = Content::where('name', '=', 'about')->get();
+        return view('pages.about', compact('about'));
     }
 
     public function privacy()

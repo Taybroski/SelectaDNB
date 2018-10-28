@@ -22,7 +22,7 @@ class CreateContentsTable extends Migration
             $table->text('privacy_body')->nullable();
             $table->string('returns_title')->default('Returns Policy');
             $table->text('returns_body')->nullable();
-            $table->string('terms_title')->nullable('Terms &amp; Conditions');
+            $table->string('terms_title')->default('Terms &amp; Conditions');
             $table->text('terms_body')->nullable();
             $table->timestamps();
         });

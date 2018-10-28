@@ -31,7 +31,7 @@
             @endforeach
         </div>
     @else
-        <h1 class="text-muted">No Products Available</h1>
+        <h1 class="text-muted text-center">No Products Available</h1>
     @endif
 </div>
 @endsection
