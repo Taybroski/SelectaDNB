@@ -5,6 +5,7 @@
 				
 				<a class="p-2 text-dark" href="{{ url('/') }}"><li class="list-item">Home</li></a>
 				<a class="p-2 text-dark" href="{{ url('/products') }}"><li class="list-item">Shop</li></a>
+				<a class="p-2 text-dark" href="{{ url('/gallery') }}"><li class="list-item">Gallery</li></a>
 				<a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Live</li></a>
 				<a class="p-2 text-dark" href="{{ url('#') }}"><li class="list-item">Blog</li></a>
 				<a class="p-2 text-dark" href="{{ url('/about') }}"><li class="list-item">About</li></a>

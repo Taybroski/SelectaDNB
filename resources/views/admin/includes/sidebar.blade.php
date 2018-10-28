@@ -4,7 +4,7 @@
 		<ul class="list-group list-unstyled text-dark">
 			<a href="{{ url('/admin/products') }}"><li class="sidebar-item mt-0"><i class="fas fa-table pr-2"></i>All Products</li></a>
 			<a href="{{ url('/products/create') }}"><li class="sidebar-item"><i class="fas fa-plus-square pr-2"></i>New Product</li></a>
-			<a href="{{ url('/contents') }}"><li class="sidebar-item"><i class="fas fa-dice-d6 pr-2"></i>Manage Content</li></a>
+			<a href="{{ url('/admin/content') }}"><li class="sidebar-item"><i class="fas fa-dice-d6 pr-2"></i>Manage Content</li></a>
 			<a href="{{ url('/orders') }}"><li class="sidebar-item"><i class="fas fa-database pr-2"></i>Orders</li></a>
 			<a href="{{ url('/users') }}"><li class="sidebar-item"><i class="fas fa-users pr-2"></i>Users</li></a>
 			<a href="#"><li class="sidebar-item"><i class="fas fa-envelope pr-2"></i>Queries</li></a>

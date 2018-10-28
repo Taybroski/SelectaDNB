@@ -11008,3 +11008,24 @@ footer,
           box-sizing: border-box;
 }
 
+.my-space-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.img-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px !important;
+  height: 250px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border: 1.2px solid rgba(0, 0, 0, 0.1);
+}
+

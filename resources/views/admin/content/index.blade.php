@@ -10,7 +10,7 @@
 		<div class="f-row">
 			{{-- Left sidebar --}}
 			<div class="sidebar col-md-4" role="navigation">
-				@include('contents.includes.sidebar')
+				@include('admin.content.includes.sidebar')
 			</div>	
 	
 			{{-- Right card main --}}
