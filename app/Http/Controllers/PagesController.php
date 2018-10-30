@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Content;
 use Auth;
 
 class PagesController extends Controller
@@ -27,10 +26,14 @@ class PagesController extends Controller
         return view('pages.home', compact('name', 'role'));
     }
 
+    public function gallery()
+    {
+        return view('pages.gallery');
+    }
+
     public function about()
     {
-        $about = Content::where('name', '=', 'about')->get();
-        return view('pages.about', compact('about'));
+        return view('pages.about');
     }
 
     public function privacy()

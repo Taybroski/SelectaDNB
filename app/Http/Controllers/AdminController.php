@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Product;
+use App\Product;
+use App\User;
 use Auth;
 
 class AdminController extends Controller
@@ -21,8 +22,19 @@ class AdminController extends Controller
         return view('admin.products', compact('products'));
     }
 
+    public function users()
+    {
+        $users = User::all();
+        return view('admin.users', compact('users'));
+    }
+
     public function content()
     {
         return view('admin.content.index');
+    }
+    
+    public function header()
+    {
+        return view('admin.content.header');
     }
 }

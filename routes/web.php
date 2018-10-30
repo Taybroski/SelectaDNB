@@ -10,6 +10,7 @@ Route::get('/about', 'PagesController@about');
 Route::get('/privacy', 'PagesController@privacy');
 Route::get('/returns', 'PagesController@returns');
 Route::get('/terms', 'PagesController@terms');
+Route::get('/gallery', 'PagesController@gallery');
 
 // Products routes
 Route::get('/products/create', 'ProductsController@create')->middleware('agent');
@@ -22,3 +23,5 @@ Route::get('/products', 'ProductsController@index');
 Route::get('/admin', 'AdminController@index')->middleware('agent');
 Route::get('/admin/products', 'AdminController@products')->middleware('agent');
 Route::get('/admin/content', 'AdminController@content')->middleware('agent');
+Route::get('/admin/users', 'AdminController@users')->middleware('agent');
+Route::get('/admin/header', 'AdminController@header')->middleware('agent');
