@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Image;
 
 class PagesController extends Controller
 {
@@ -16,7 +17,8 @@ class PagesController extends Controller
 
     public function index()
     {
-        return view('pages.index');
+        $header = Image::latest()->first();
+        return view('pages.index', compact('header'));
     }
 
     public function home()
