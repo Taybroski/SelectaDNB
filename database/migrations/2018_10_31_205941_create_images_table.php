@@ -16,9 +16,9 @@ class CreateImagesTable extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
             $table->string('link');
-            $table->boolean('gal');
-            $table->boolean('port');
-            $table->boolean('header');
+            $table->string('gal')->default('false');
+            $table->string('port')->default('false');
+            $table->string('header')->default('false');
             $table->timestamps();
         });
     }

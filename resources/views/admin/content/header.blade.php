@@ -21,6 +21,19 @@
 
           <div class="card-body minh-40">
             
+            <form action="ImagesController@store" method="/images" enctype="multipart/form-data" role="form">
+              {{ csrf_field() }}
+              <div class="f-row">
+                <div class="col-force">
+                  <label for="link" class="small">Choose Image</label>
+                  <input type="file" name="link">
+                  <input type="hidden" name="header">
+                </div>
+                
+                  
+              </div>
+            </form>
+            
           </div>
           <div class="card-footer text-right">
               <a href="{{ url('/home') }}">Visit Profile <i class="fas fa-arrow-alt-circle-right pl-2"></i></a>
