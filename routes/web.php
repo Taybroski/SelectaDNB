@@ -19,6 +19,9 @@ Route::get('/products/{id}', 'ProductsController@show');
 Route::get('/products', 'ProductsController@index');
 // Route::resource('/products', 'ProductsController');
 
+// Images routes
+Route::post('/admin/{id}', 'ImagesController@store');
+
 // Admin routes
 Route::get('/admin', 'AdminController@index')->middleware('agent');
 Route::get('/admin/products', 'AdminController@products')->middleware('agent');

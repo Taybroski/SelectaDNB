@@ -43,7 +43,7 @@ class ProductsController extends Controller
             $name      = pathinfo($raw_image, PATHINFO_FILENAME);
             $extension = $request->file('cover_image')->getClientOriginalExtension();
             $image     = $name.'.'.time().'.'.$extension;
-            $path      = $request->file('cover_image')->storeAs('public/images', $image);
+            $path      = $request->file('cover_image')->storeAs('public/images/products', $image);
         } else {
             $image = 'no_image.jpg';
         }

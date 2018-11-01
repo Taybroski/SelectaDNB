@@ -20,29 +20,34 @@
           </div>
 
           <div class="card-body minh-40">
-            
-            <form action="ImagesController@store" method="/images" enctype="multipart/form-data" role="form">
-              {{ csrf_field() }}
-              <div class="f-row">
-                <div class="col-force">
-                  <label for="link" class="small">Choose Image</label>
-                  <input type="file" name="link">
-                  <input type="hidden" name="header">
-                </div>
-                
-                  
+            <div class="f-row">
+              <div class="col-sm-7">
+                <form action="ImagesController@store" method="POST" enctype="multipart/form-data" role="form">
+                  {{ csrf_field() }}
+                  <div class="form-control">
+                    <label for="link" class="small">Choose Image</label>
+                    <input type="file" name="link">
+                    <input type="hidden" name="header" value="true">
+                    <br><br>
+                    <button type="submit" class="mb-2">Upload Image</button>
+                  </div>
+                </form>
               </div>
-            </form>
-            
+
+              <div class="col-sm-5">
+                <p class="text-muted">
+                  Upload a new header image here or choose from previously used images.
+                </p>
+              </div>
+            </div>
           </div>
+
           <div class="card-footer text-right">
               <a href="{{ url('/home') }}">Visit Profile <i class="fas fa-arrow-alt-circle-right pl-2"></i></a>
           </div>
         </div>
-
 			</div>
     </div>
-    
 </div> 
 	
 @endsection
