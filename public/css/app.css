@@ -10994,6 +10994,19 @@ nav ul {
   border-radius: 0.2rem;
 }
 
+.img-about {
+  max-width: 15rem;
+  max-height: 15rem;
+}
+
+.my-space-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 footer,
 .push {
   height: 12rem;
@@ -11001,15 +11014,5 @@ footer,
 
 .border-top {
   border-top: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-}
-
-.border-box {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 

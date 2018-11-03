@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Image;
 use App\User;
 use Auth;
 
@@ -35,6 +36,7 @@ class AdminController extends Controller
     
     public function header()
     {
-        return view('admin.content.header');
+        $headers = Image::where('header', '!=', '')->get();
+        return view('admin.content.header', compact('headers'));
     }
 }

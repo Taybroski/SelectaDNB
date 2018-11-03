@@ -11,7 +11,7 @@
       Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
     </p>
 
-    <div class="f-row my-space-around mt-5 text-center">
+    <div class="f-row my-space-around mt-5 text-center"> 
       <div class="col-force">
         <div class="my-space-around">
           <img class="img-about rounded-circle" src="https://placeimg.com/500/500/any" alt="">

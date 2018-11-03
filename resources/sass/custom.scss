@@ -59,14 +59,18 @@ p {
     min-width: 220px;
 }
 
+//
 // Tables
+//
 table > thead {
     border-radius: 0.5rem;
     background-color: rgba(0, 0, 0, 0.075);
 }
 // end Tables
 
+//
 // Products
+//
 .img-custom {
     // Product Image
     width: 18rem;
@@ -76,7 +80,9 @@ table > thead {
 }
 // end Products
 
+//
 // Homepage Portfolio
+//
 .gal-item {
     overflow: hidden;
     padding: 8px;
@@ -92,7 +98,9 @@ table > thead {
 }
 //end Homepage Portfolio
 
+//
 // Navbar
+//
 nav {
     width: 100%;
 
@@ -104,10 +112,11 @@ nav {
 .border-bottom {
     border-bottom: 1px solid #e5e5e5;
 }
-
 // end Navbar
 
+//
 // Admin Nav sidebar
+//
 .sidebar-item {
     padding: 0 0 0.5rem 1rem;
     margin-top: 0.6rem;
@@ -115,7 +124,9 @@ nav {
 }
 // end Admin Nav sidebar
 
+//
 // Admin Main
+//
 .img-thumb {
     display: inline-block;
     max-width: 10rem !important;
@@ -127,7 +138,22 @@ nav {
 }
 // end Admin Main
 
+//
+// About page
+//
+.img-about {
+    max-width: 15rem;
+    max-height: 15rem;
+}
+.my-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+// end About page
+
+//
 // Footer
+//
 footer,
 .push {
     height: $footer-height;
@@ -137,10 +163,4 @@ footer,
 }
 // end Footer
 
-.box-shadow {
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-}
-.border-box {
-    box-sizing: border-box;
-}
 // end Footer

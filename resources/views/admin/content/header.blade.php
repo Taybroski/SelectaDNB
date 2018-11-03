@@ -40,6 +40,15 @@
                 </p>
               </div>
             </div>
+
+            {{-- Show a limited amount of previously used header images. --}}
+            <ul>
+              @foreach ($headers as $img)
+                <li>
+                  {{ $img->link }}
+                </li>
+              @endforeach  
+            </ul>
           </div>
 
           <div class="card-footer text-right">

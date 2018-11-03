@@ -1,4 +1,4 @@
-<footer class="pt-4 5 pt-md-4 border-top bg-white">
+<footer class="pt-4 pt-md-4 border-top bg-white mt-4">
     <div class="container">
         <div class="row">
           <div class="col-12 col-md">
