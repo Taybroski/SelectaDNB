@@ -18,6 +18,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::all();
+
         return view('products.index', compact('products'));
     }
 
@@ -66,12 +67,12 @@ class ProductsController extends Controller
         $product->save();
 
         return redirect('/admin')->with('success', 'Product added to database!');
-
     }
 
     public function show($id)
     {
         $product = Product::find($id);
+
         return view('products.show', compact('product'));
     }
 
@@ -87,12 +88,17 @@ class ProductsController extends Controller
 
     public function destroy($id)
     {
-        //
+        $p = Product::find($id);
+        \Storage::delete('/public/images/products/'.$p->cover_image);
+        $p->delete();
+        
+        return redirect('/admin/products')->with('sucess', 'Product removed from database');
     }
 
     public function list()
     {
         $products = Product::all();
+
         return view('products.list', compact('products'));
     }
 }

@@ -14,13 +14,16 @@ Route::get('/gallery', 'PagesController@gallery');
 
 // Products routes
 Route::get('/products/create', 'ProductsController@create')->middleware('agent');
-Route::post('/products/{id}', 'ProductsController@store')->middleware('agent');
+Route::post('/products/store/{id}', 'ProductsController@store')->middleware('agent');
 Route::get('/products/{id}', 'ProductsController@show');
 Route::get('/products', 'ProductsController@index');
+Route::get('/products/delete/{id}', 'ProductsController@destroy');
 // Route::resource('/products', 'ProductsController');
 
 // Images routes
 Route::post('/admin/{id}', 'ImagesController@store');
+Route::get('/admin/image/update/{id}', 'ImagesController@update');
+Route::get('/admin/image/delete/{id}', 'ImagesController@destroy');
 
 // Admin routes
 Route::get('/admin', 'AdminController@index')->middleware('agent');

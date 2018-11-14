@@ -6,7 +6,7 @@
 
   <table class="table table-hover border text-center">
     <thead>
-      <tr>
+      <tr>  
         <th scope="col"><a href="#"><small class="underline">Select All</small></a></th>
         <th scope="col">ID</th>
         <th scope="col">Type</th>
@@ -41,7 +41,11 @@
               <td>&pound; {{ $product->price }}</td>
               <td>{{ str_limit($product->created_at, 10, $end = '') }}</td>
               <td><i class="fas fa-pen-square"></i></td>
-              <td><i class="fas fa-trash-alt"></i></td>
+              <td>
+                <a id="deleteConfirm" href="/products/delete/{{ $product->id }}">
+                  <i class="fas fa-trash-alt"></i>
+                </a>
+              </td>
             </tr>
           </tbody>
         @endforeach      

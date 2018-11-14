@@ -9,7 +9,7 @@
                 <h4 class="my-0 font-weight-normal">{{ $product->type }}</h4>
             </div>
             <div class="card-body">
-                <img src="/storage/images/{{ $product->cover_image }}" alt="{{ $product->title }}" class="img-custom">
+                <img src="/public/images/products/{{ $product->cover_image }}" alt="{{ $product->title }}" class="img-custom">
                 <h1 class="card-title pricing-card-title"><small class="text-muted">{{ $product->title }} - {{ $product->colour }}</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>Size: {{ $product->size }}</li>

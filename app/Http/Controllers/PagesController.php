@@ -18,7 +18,7 @@ class PagesController extends Controller
     public function index()
     {
         $header = Image::latest()->first();
-        return view('pages.index', compact('header'));
+        return view('pages.front', compact('header'));
     }
 
     public function home()

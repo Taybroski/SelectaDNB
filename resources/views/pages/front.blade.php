@@ -19,15 +19,19 @@
 </head>
 <body>
 
-    <div class="meta-wrapper">
-        @include('layouts.navbar')
-        <div class="container">
-            @include('includes.messages')
-            @yield('content')
-        </div>
-        <div class="push"></div>
+@section('body_class', 'front-page')
+    
+  <div class="front-meta">
+    <div class="front-container">
+      <div class="front-top">
+        <h1 class="text-center">SELECTA DNB</h1>
+      </div>
+
+      <div class="front-bottom">
+        <p class="text-center">base index page, pages controller.</p>
+      </div>
     </div>
-    @include('layouts.footer')
+  </div>
 
 </body>
 </html>

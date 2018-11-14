@@ -14,7 +14,7 @@
               <li><a class="text-muted" href="#">07797 740 114</a></li>
               <li><a class="text-muted" href="#">07797 740 114</a></li>
               <li><a class="text-muted" href="#">Facebook</a></li>
-              <li><a class="text-muted" href="#">Instagram</a></li>
+              <li><a class="text-muted" href="https://www.instagram.com/selectadnb_/">Instagram</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">

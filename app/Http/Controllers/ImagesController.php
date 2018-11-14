@@ -35,8 +35,24 @@ class ImagesController extends Controller
         return redirect('/admin/header')->with('success', 'New website header set!');
     }
 
+    public function update(Request $request, $id)
+    {
+        $img = Image::find($id);
+        $img->updated_at = \DB::raw('NOW()');
+        $img->save();
+
+        return redirect('/')->with('success', 'New header image set');
+    }
+
     public function destroy($id)
     {
-        //
+        $image = Image::find($id);
+        \Storage::delete('/public/images/content/'.$image->link);   
+        $image->delete();
+        if(!$image) {
+            return redirect('/admin/header')->with('error', 'No File Found');
+        } else {
+            return redirect('/admin/header')->with('success', 'Image Deleted!');
+        }
     }
 }

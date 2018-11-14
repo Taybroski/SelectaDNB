@@ -40,15 +40,29 @@
                 </p>
               </div>
             </div>
-
+            <br>
             {{-- Show a limited amount of previously used header images. --}}
-            <ul>
-              @foreach ($headers as $img)
-                <li>
-                  {{ $img->link }}
-                </li>
-              @endforeach  
-            </ul>
+            <table class="table">
+              <tbody class="">
+                @foreach ($headers as $img)
+                  <tr class="align-items-center">
+                    <td>
+                      <img src="/storage/images/content/{{ $img->link }}" alt="" class="img-thumbnail">
+                    </td>
+                    <td class="vertical-align-middle horizontal minh-100">
+                      <a href="/admin/image/update/{{ $img->id }}">
+                        <i class="fas fa-image"></i>
+                      </a>
+                    </td>
+                    <td class="vertical-align-middle horizontal minh-100">
+                      <a id="deleteConfirm" href="/admin/image/delete/{{ $img->id }}">
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
           </div>
 
           <div class="card-footer text-right">

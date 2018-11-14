@@ -10862,6 +10862,8 @@ p {
 
 .jumbotron {
   margin-bottom: 0 !important;
+  padding: 0;
+  position: relative;
 }
 
 .img-header {
@@ -10886,6 +10888,10 @@ p {
 
 .minw-100 {
   min-width: 100%;
+}
+
+.minh-100 {
+  min-height: 100%;
 }
 
 .minh-40 {
@@ -10934,6 +10940,10 @@ p {
   min-width: 220px;
 }
 
+td.vertical-align-middle {
+  vertical-align: middle;
+}
+
 table > thead {
   border-radius: 0.5rem;
   background-color: rgba(0, 0, 0, 0.075);
@@ -10976,6 +10986,18 @@ nav ul {
 
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
+}
+
+.header-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header-text {
+  text-shadow: 0 0 10px #fff;
 }
 
 .sidebar-item {
